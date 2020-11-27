@@ -12,8 +12,8 @@ import ua.edu.ucu.smartarr.MapDecorator;
 import ua.edu.ucu.smartarr.DistinctDecorator;
 
 public class SmartArrayApp {
-    final static int GRADE = 4;
-    final static int YEAR = 2;
+    static final int GRADE = 4;
+    static final int YEAR = 2;
 
     public static Integer[]
             filterPositiveIntegersSortAndMultiplyBy2(Integer[] integers) {
