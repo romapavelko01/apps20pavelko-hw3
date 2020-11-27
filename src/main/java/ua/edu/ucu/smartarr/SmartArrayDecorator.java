@@ -7,5 +7,4 @@ abstract class SmartArrayDecorator implements SmartArray {
     public SmartArrayDecorator(SmartArray smartArray) {
         this.smartArray = smartArray;
     }
-
 }
