@@ -12,8 +12,8 @@ import ua.edu.ucu.smartarr.MapDecorator;
 import ua.edu.ucu.smartarr.DistinctDecorator;
 
 public class SmartArrayApp {
-    static final int grade = 4;
-    static final int year = 2;
+    final static int GRADE = 4;
+    final static int YEAR = 2;
 
     public static Integer[]
             filterPositiveIntegersSortAndMultiplyBy2(Integer[] integers) {
@@ -61,7 +61,8 @@ public class SmartArrayApp {
         MyPredicate predicate = new MyPredicate() {
             @Override
             public boolean test(Object t) {
-                return ((Student) t).getYear() == year && ((Student) t).getGPA() >= grade;
+                return ((Student) t).getYear() == YEAR
+                        && ((Student) t).getGPA() >= GRADE;
             }
         };
 
@@ -79,10 +80,12 @@ public class SmartArrayApp {
                 }
                 else {
                     for (int ci = 0; ci < firstStudent.length(); ci++) {
-                        if (firstStudent.charAt(ci) > secondStudent.charAt(ci)) {
+                        if (firstStudent.charAt(ci)
+                                > secondStudent.charAt(ci)) {
                             return 1;
                         }
-                        else if (firstStudent.charAt(ci) < secondStudent.charAt(ci)) {
+                        else if (firstStudent.charAt(ci)
+                                < secondStudent.charAt(ci)) {
                             return -1;
                         }
                     }
@@ -94,7 +97,8 @@ public class SmartArrayApp {
         MyFunction function = new MyFunction() {
             @Override
             public Object apply(Object t) {
-                return ((Student) t).getSurname() + " " + ((Student) t).getName();
+                return ((Student) t).getSurname() + " "
+                        + ((Student) t).getName();
             }
         };
         SmartArray studentArr = new BaseArray(students);
