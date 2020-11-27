@@ -5,6 +5,8 @@ import ua.edu.ucu.functions.*;
 import ua.edu.ucu.smartarr.*;
 
 public class SmartArrayApp {
+    static final int grade = 4;
+    static final int year = 2;
 
     public static Integer[]
             filterPositiveIntegersSortAndMultiplyBy2(Integer[] integers) {
@@ -52,7 +54,7 @@ public class SmartArrayApp {
         MyPredicate predicate = new MyPredicate() {
             @Override
             public boolean test(Object t) {
-                return ((Student) t).getYear() == 2 && ((Student) t).getGPA() >= 4;
+                return ((Student) t).getYear() == year && ((Student) t).getGPA() >= grade;
             }
         };
 
